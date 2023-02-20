@@ -2,17 +2,30 @@
     display: flex;
     justify-content: space-between;
     background-color: #265c5f;
-    padding: 0.5em;
+    padding: 1.5em;
 }
 
 .img{
-    width: 150px;
+    width: 200px;
+    margin: 0;
+}
+
+.login{
+    width: 50px;
+    border-radius: 10px;
 }
 
 .list{
     display: flex;
     list-style: none;
     align-items: center;
+}
+
+.list_login{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0 0 0 20px;
 }
 
 .item{

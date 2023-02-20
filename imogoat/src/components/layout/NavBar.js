@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import Container from './Container'
 
 import styles from './NavBar.module.css'
-import logo from '../../imgs/logo.png'
+import logo from '../../imgs/logo-teste.png'
 import login from '../../imgs/user.png'
 
 function NavBar(){
@@ -18,16 +18,16 @@ function NavBar(){
                         <Link to='/'>Home</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/empresa'>Empresa</Link>
+                        <Link to='/empresa'>Contato</Link>
                     </li>
                     <li className={styles.item}>
-                        <Link to='/contato'>Contato</Link>
+                        <Link to='/contato'>Sobre</Link>
                     </li>
-                    {/* <li>
-                        <Link to='/'>
-                            <img src={login} alt='login'>Login</img>
+                    <li className={styles.item}>
+                        <Link to='/login'>
+                            <img src={login} alt='imoGOAT' className={styles.login} align='center'></img> Login
                         </Link>
-                    </li> */}
+                    </li>
                 </ul>
             </Container>
         </div>
