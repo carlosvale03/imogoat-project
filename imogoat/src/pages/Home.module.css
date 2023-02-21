@@ -1,7 +1,7 @@
 .fundo{
-    /* background-image: url("/imogoat/src/imgs/logo.png"); */
+    background: url("../imgs/imovel.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 300px;
+    background-size: 300px;
 }
 
 /* Classe para criar efeito de aproximação */
