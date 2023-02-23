@@ -5,7 +5,7 @@ import Pesquisa from '../components/layout/Homepage/Pesquisa'
 
 function Home(){
     return (
-        <div>
+        <div className={styles.fundo}>
             <Imagem_fundo />
             <Pesquisa />
         </div>

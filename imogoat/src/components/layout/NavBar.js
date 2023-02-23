@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import Container from './Container'
 
 import styles from './NavBar.module.css'
-import logo from '../../imgs/logo-teste.png'
+import logo from '../../imgs/LOGO_goat_imob branco.png'
 import login from '../../imgs/user.png'
 
 function NavBar(){
