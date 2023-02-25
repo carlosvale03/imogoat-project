@@ -1,3 +1,26 @@
+.container {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin-top: 25px;
+}
+
+.espaco {
+  width: 1020px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  /* grid-template-rows: 200px; */
+}
+
+.sugestoes{
+  margin: 10px;
+}
+
+
 .fundo{
     background: url("../imgs/background.png");
     background-repeat: no-repeat;

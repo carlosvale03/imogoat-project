@@ -1,0 +1,48 @@
+.container{
+    height: 250px;
+    max-width: 95%;
+    min-width: 95%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.img{
+    /* background-color: red; */
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+}
+
+.texto{
+    padding: 0 15px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    cursor: pointer;
+}
+
+h3 :hover{
+    text-decoration: underline;
+}
+
+.coracao{
+    width: 20px;
+    cursor: pointer;
+}
+
+.visto{
+    width: 15px;
+    height: 15px;
+    margin: 4px;
+}
+
+.vantagens{
+    display: flex;
+    margin-top: 6px;
+}
