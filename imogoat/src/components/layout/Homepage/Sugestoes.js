@@ -10,11 +10,12 @@ function Sugestoes({ id, camImg, titulo, ap, vantagens }){
     }
 
     function mudaCoracao(id){
-        document.getElementById(id).src = coracao
-        let aux = coracao
-        coracao = redcoracao
-        redcoracao = aux
-        console.log("mudou")
+        const img = document.getElementById(id);
+        img.src = coracao;
+        const aux = coracao;
+        coracao = redcoracao;
+        redcoracao = aux;
+        console.log("mudou");
     }
     
     return (
