@@ -11,12 +11,13 @@
     list-style-type: none;
 }
 
-.social_list li{
+.list{
     margin: 0 1em;
+    color: #fcfcfc;
 }
 
-.social_list li:hover{
-    color: #ffbb33;
+.list :hover{
+    color: #FFBE3D;
 }
 
 .social_list svg{
@@ -30,5 +31,5 @@
 
 .copy_right span{
     font-weight: bold;
-    color: #ffbb33;
+    color: #FFBE3D;
 }

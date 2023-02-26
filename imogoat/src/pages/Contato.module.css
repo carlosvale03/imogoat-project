@@ -1,0 +1,160 @@
+/***  FONTS ***/
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+
+/***  VARIABLES & THEMES ***/
+
+:root {
+  --primary-color: #265c5f;
+  --primary-color-contrast: #fcfcfc;
+  --field-background-color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  --header-background-color: #e3e3e3;
+  --highlight-color: #000000;
+  --featured-font-family: "Archivo", sans-serif;
+  --character-top-image-color: #ffffff;
+  --character-bottom-image-color: #e5e5e5;
+  --footer-background-color: #b5bbbf;
+}
+
+/***  GENERIC STYLES ***/
+
+/* * {
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+.container h1, .container h2, .container h3 {
+  font-family: var(--featured-font-family);
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.container p {
+  color: var(--highlight-color);
+}
+
+.container p,
+.container input,
+.container textarea,
+.container label {
+  font-family: "Libre Baskerville", serif;
+}
+
+.container button {
+  padding: 16px 32px;
+  background-color: transparent;
+  font-weight: 900;
+  font-family: var(--featured-font-family);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* transition: background 1s; */
+}
+
+
+.container input,
+.container textarea {
+  border: 2px solid var(--primary-color-contrast);
+  background-color: var(--field-background-color);
+  color: var(--primary-color-contrast);
+  padding: 8px;
+}
+
+.container input,
+.container textarea {
+  margin-bottom: 24px;
+}
+
+.container label {
+  margin-bottom: 8px;
+}
+
+.container input:focus-visible,
+.container textarea:focus-visible {
+  outline: none;
+  border-color: black;
+}
+
+#section_form {
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+#section_form h2 {
+  width: 600px;
+}
+
+#section_form .form_content h3 {
+  color: var(--highlight-color);
+}
+
+#section_form .form_content h3 span {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#section_form .form_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#section_form .form_content h3 {
+  flex-basis: 30%;
+  text-align: left;
+  margin: 0;
+}
+
+#section_form .form_container {
+  flex-basis: 50%;
+  position: relative;
+}
+
+#section_form .form_container::after {
+  content: "";
+  background-color: var(--highlight-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: -1;
+}
+
+#section_form .form_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
+  text-align: left;
+}
+
+#section_form .form_container form button {
+  border: none;
+  background-color: var(--field-background-color);
+  color: var(--primary-color-contrast);
+  max-width: 300px;
+  align-self: center;
+}
+
+#section_form .form_container form button:hover {
+  background-color: var(--primary-color-contrast);
+  color: var(--field-background-color);
+}

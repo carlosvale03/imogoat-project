@@ -14,7 +14,7 @@ function Home(){
         <div className={styles.fundo}>
             <Imagem_fundo />
             <Pesquisa />
-            <div className={styles.container}>
+            <div className={styles.container_home}>
                 <div className={styles.espaco}>
                     <Sugestoes id='coracao1' camImg={ap1} titulo='Edificio Pedro Barbosa'
                     ap='Ap 301, torre II' vantagens='vantagens' />

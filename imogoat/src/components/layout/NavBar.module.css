@@ -1,44 +1,53 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    background-color: #265c5f;
-    padding: 1.5em;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #265c5f;
+  padding: 1.5em;
 }
 
-.img{
-    width: 150px;
-    margin: 0;
+.img {
+  width: 200px;
+  margin-top: px;
 }
 
-
-.login{
-    width: 50px;
-    border-radius: 10px;
-    margin: 0 0 0 20px;
+.div_img {
+  height: 10px;
 }
 
-.list{
-    display: flex;
-    list-style: none;
-    align-items: center;
+.div_img :hover {
+  border-radius: 10px;
+  background: linear-gradient(145deg, #296266, #225356);
+  box-shadow: 20px 20px 40px #2e3c4e, -5px -5px 40px #1f7c70;
 }
 
-.list_login{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    margin: 0 0 0 20px;
+.login {
+  width: 50px;
+  border-radius: 10px;
+  margin: 0 0 0 20px;
 }
 
-.item{
-    margin-right: 1em;
+.list {
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
-.item a{
-    color: #fff;
-    text-decoration: none;
+.list_login {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0 0 0 20px;
 }
 
-.item a:hover{
-    color: #ffbb33;
+.item {
+  margin-right: 1em;
+}
+
+.item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.item a:hover {
+  color: #FFBE3D;
 }

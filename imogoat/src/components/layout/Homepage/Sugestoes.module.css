@@ -18,22 +18,24 @@
     padding: 0 15px;
 }
 
-.titulo{
+.superior_titulo{
     display: flex;
     justify-content: space-between;
 }
 
-h3{
-    cursor: pointer;
+.titulo{
+    text-decoration: none;
+    color: #2e3c4e;
 }
 
-h3 :hover{
+/* .titulo :hover{
     text-decoration: underline;
-}
+} */
 
 .coracao{
     width: 20px;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 .visto{
