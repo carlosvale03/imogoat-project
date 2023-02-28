@@ -7,9 +7,6 @@ import redcoracao from '../../../imgs/coracao vermelho.png'
 import visto from '../../../imgs/visto.png'
 
 function Sugestoes({ id, camImg, titulo, ap, vantagens }){
-    function funcao(){
-        console.log("teste")
-    }
 
     function mudaCoracao(id){
         const img = document.getElementById(id);

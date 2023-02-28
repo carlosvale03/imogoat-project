@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer';
 import './App.css';
 import Home from './pages/Home'
 import Contato from './pages/Contato';
+import Sobre from './pages/Sobre';
 
 
 import Container from './components/layout/Container';
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/contato' element={<Contato />} />
+          <Route path='/sobre' element={<Sobre />} />
         </Routes>
       </Container>
       <Footer/>
