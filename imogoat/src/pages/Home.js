@@ -16,7 +16,7 @@ function Home(){
             <Pesquisa />
             <div className={styles.container_home}>
                 <div className={styles.espaco}>
-                    <Sugestoes id='coracao1' camImg={ap1} titulo='Edificio Pedro Barbosa'
+                    <Sugestoes id='coracao1' camImg={ap1} titulo='Edificio Will'
                     ap='Ap 301, torre II' vantagens='vantagens' />
                     <Sugestoes id='coracao2' camImg={ap2} titulo='Edificio Pedro Barbosa'
                     ap='Ap 301, torre II' vantagens='vantagens' />

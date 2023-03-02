@@ -4,17 +4,17 @@ import Container from './Container'
 
 import styles from './NavBar.module.css'
 import logo from '../../imgs/logo-teste.png'
-import logodourado from '../../imgs/logo-dourado.png'
+// import logodourado from '../../imgs/logo-dourado.png'
 import login from '../../imgs/user.png'
 
 function NavBar(){
-    function mudaLogo(){
-        const img = document.getElementById("logo");
-        img.src = logodourado;
-        const aux = logo;
-        logo = logodourado;
-        logodourado = aux;
-    } 
+    // function mudaLogo(){
+    //     const img = document.getElementById("logo");
+    //     img.src = logodourado;
+    //     const aux = logo;
+    //     logo = logodourado;
+    //     logodourado = aux;
+    // } 
 
     return (
         <div className={styles.navbar}>
