@@ -10,7 +10,7 @@ function Footer(){
                 <Link>
                     <li className={styles.list}><FaFacebook/></li>
                 </Link>
-                <Link to='https://instagram.com/imo.goat?igshid=ZDdkNTZiNTM=' target='_blank'>
+                <Link to='https://instagram.com/imo_goat?igshid=ZDdkNTZiNTM=' target='_blank'>
                     <li className={styles.list}><FaInstagram/></li>
                 </Link>
                 <Link>
