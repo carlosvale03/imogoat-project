@@ -35,10 +35,10 @@
 
 .container h1, .container h2, .container h3 {
   font-family: var(--featured-font-family);
-  font-size: 3rem;
+  font-size: 3.5vw;
   color: var(--primary-color);
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 0.5vw;
 }
 
 .container p {
@@ -53,11 +53,11 @@
 }
 
 .container button {
-  padding: 16px 32px;
+  padding: 1vw 2vw;
   background-color: transparent;
   font-weight: 900;
   font-family: var(--featured-font-family);
-  font-size: 1.25rem;
+  font-size: 1.25vw;
   text-transform: uppercase;
   cursor: pointer;
   /* transition: background 1s; */
@@ -69,16 +69,17 @@
   border: 2px solid var(--primary-color-contrast);
   background-color: var(--field-background-color);
   color: var(--primary-color-contrast);
-  padding: 8px;
+  padding: 0.7vw;
 }
 
 .container input,
 .container textarea {
-  margin-bottom: 24px;
+  margin-bottom: 1.8vw;
 }
 
 .container label {
-  margin-bottom: 8px;
+  margin-bottom: 1vw;
+  font-size: 1vw;
 }
 
 .container input:focus-visible,
@@ -90,12 +91,12 @@
 #section_form {
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 2vw;
   text-align: center;
 }
 
 #section_form h2 {
-  width: 600px;
+  width: 50vw;
 }
 
 #section_form .form_content h3 {
@@ -105,7 +106,7 @@
 #section_form .form_content h3 span {
   color: var(--primary-color);
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 3.5vw;
 }
 
 #section_form .form_content {

@@ -1,24 +1,52 @@
 import { getLista } from './Dashboard.tsx';
+import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+
+import styles from './Propriedade.module.css'
+import Galery from '../components/layout/Propipage/Galery';
+
+import Map from '../components/layout/Propipage/map.tsx';
 
 function getPropriedadeById(id) {
   const lista = getLista();
   return lista.find((item) => item.id === id);
 }
 
-function Propriedade(props) {
-    const id = props.match.params.id;
-    const propriedade = getPropriedadeById(id);
+function Propriedade() {
+    const { id } = useParams();
+    const item = getPropriedadeById(id ? Number.parseInt(id, 10) : null);
+    const camImg = item.camImg;
+    const imgs = item.imgs;
+    
 
-    console.log(props)
-    console.log(propriedade); // imprime o objeto da propriedade no console
+    // console.log(item); // imprime o objeto da propriedade no console
+
+
+    const [imgSrc, setImgSrc] = useState("");
+
+    useEffect(() => {
+        const loadImage = async () => {
+            const image = await import('../imgs' + camImg);
+            setImgSrc(image.default);
+            console.log(imgSrc)
+        }
+        loadImage();
+    }, [camImg])
+
   
     return (
       <div>
-        <h2>{propriedade.titulo}</h2>
-        <img src={propriedade.camImg} alt={propriedade.titulo} />
-        <p>{propriedade.nome}</p>
-        <p>{propriedade.vantagens}</p>
-        <p>{propriedade.tipo}</p>
+        <h2>{item.titulo}</h2>
+        <p>{item.nome}</p>
+        <img src={imgSrc} alt={item.titulo} />
+        <div className={styles.galery}>
+          {imgs.map((itens, index) => (
+              <Galery id={index} camImg={itens} />
+          ))}
+        </div>
+        <p>{item.vantagens}</p>
+        <p>{item.tipo}</p>
+        <Map item={item} />
       </div>
     );
   }

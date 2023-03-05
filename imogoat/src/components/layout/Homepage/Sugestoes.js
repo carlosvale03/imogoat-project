@@ -7,7 +7,7 @@ import coracao from '../../../imgs/coracao.png'
 import redcoracao from '../../../imgs/coracao vermelho.png'
 import visto from '../../../imgs/visto.png'
 
-function Sugestoes({ id, camImg, titulo, ap, vantagens, tipo }){
+function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
 
     function mudaCoracao(id){
         const img = document.getElementById(id);
@@ -16,6 +16,10 @@ function Sugestoes({ id, camImg, titulo, ap, vantagens, tipo }){
         coracao = redcoracao;
         redcoracao = aux;
     }
+
+    // function selecionaItem(id) {
+    //     props.selecionarItem(id);
+    // }
 
     const [imgSrc, setImgSrc] = useState("");
 
@@ -29,7 +33,7 @@ function Sugestoes({ id, camImg, titulo, ap, vantagens, tipo }){
     
     return (
         <div className={styles.container}>
-            <Link to={`/propriedade/:${id}`}>
+            <Link to={`/propriedade/${id}`}>
                 <img className={styles.img} src={imgSrc} />
             </Link>
 

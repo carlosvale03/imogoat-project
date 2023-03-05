@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import './App.css';
@@ -11,6 +12,13 @@ import Propriedade from './pages/Propriedade';
 import Container from './components/layout/Container';
 
 function App() {
+  // const [itemSelecionado, setItemSelecionado] = useState(null);
+
+  // function selecionarItem(id) {
+  //   setItemSelecionado(id);
+  // }
+
+
   return (
     <Router>
       <NavBar />
@@ -20,7 +28,7 @@ function App() {
           <Route path='/contato' element={<Contato />} />
           <Route path='/sobre' element={<Sobre />} />
           <Route path='/login' element={<Teste />} />
-          <Route path="/propriedade/:id" component={Propriedade} />
+          <Route path="/propriedade/:id" element={<Propriedade />} />
         </Routes>
       </Container>
       <Footer/>

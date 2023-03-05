@@ -1,11 +1,11 @@
 .btn {
-  font-size: 12px;
+  font-size: 1vw;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
   font-weight: bold;
-  padding: 0.7em 2em;
+  padding: 0.7em 2vw;
   border: 3px solid #265c5f;
   border-radius: 5px;
   position: relative;
@@ -14,8 +14,8 @@
   text-decoration: none;
   transition: 0.3s ease all;
   z-index: 1;
-  margin: 15px;
-  margin-left: 30px;
+  margin: 1vw;
+  margin-left: 2vw;
 }
 
 .btn:before {
