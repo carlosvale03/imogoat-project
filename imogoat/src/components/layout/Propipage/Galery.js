@@ -7,7 +7,6 @@ function Galery({ camImg }){
         const loadImage = async () => {
             const image = await import('../../../imgs' + camImg);
             setImgSrc(image.default);
-            console.log(imgSrc)
         }
         loadImage();
     }, [camImg])

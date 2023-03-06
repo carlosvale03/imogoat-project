@@ -32,7 +32,7 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
     }, [camImg])
     
     return (
-        <div className={styles.container}>
+        <div key={id} className={styles.container}>
             <Link to={`/propriedade/${id}`}>
                 <img className={styles.img} src={imgSrc} />
             </Link>

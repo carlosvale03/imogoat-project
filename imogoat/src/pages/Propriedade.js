@@ -18,7 +18,6 @@ function Propriedade() {
     const camImg = item.camImg;
     const imgs = item.imgs;
     
-
     // console.log(item); // imprime o objeto da propriedade no console
 
 
@@ -28,7 +27,6 @@ function Propriedade() {
         const loadImage = async () => {
             const image = await import('../imgs' + camImg);
             setImgSrc(image.default);
-            console.log(imgSrc)
         }
         loadImage();
     }, [camImg])
@@ -41,7 +39,7 @@ function Propriedade() {
         <img src={imgSrc} alt={item.titulo} />
         <div className={styles.galery}>
           {imgs.map((itens, index) => (
-              <Galery id={index} camImg={itens} />
+              <Galery key={index} id={index} camImg={itens} />
           ))}
         </div>
         <p>{item.vantagens}</p>

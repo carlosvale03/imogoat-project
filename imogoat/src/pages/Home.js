@@ -17,7 +17,7 @@ function Home(){
             <div className={styles.container_home}>
                 <div className={styles.espaco}>
                     {listaQuatro.map((item, index) => (
-                    <Sugestoes id={item.id} camImg={item.camImg} titulo={item.titulo}
+                    <Sugestoes key={index} id={item.id} camImg={item.camImg} titulo={item.titulo}
                     ap={item.nome} vantagens={item.vantagens} tipo={item.tipo} />
                     ))}
                 </div>
