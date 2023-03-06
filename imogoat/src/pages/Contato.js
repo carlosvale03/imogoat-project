@@ -45,19 +45,19 @@ function Contato(){
               <h3>Entre em contato com os criadores do <span>ImoGOAT</span></h3>
                 <div className={styles.form_container}>
                     <form onSubmit={sendEmail}>
-                        <label for="name">Nome Completo</label>
+                        <label htmlFor="name">Nome Completo</label>
                         <input type="text" name="name" id="txtName" value={name} 
                         onChange={(e)=>setName(e.target.value)}></input>
                     
-                        <label for="email">E-mail</label>
+                        <label htmlFor="email">E-mail</label>
                         <input type="email" name="email" id="txtEmail" value={email}
                         onChange={(e)=>setEmail(e.target.value)}></input>
                     
-                        <label for="assunto">Assunto</label>
+                        <label htmlFor="assunto">Assunto</label>
                         <input type="text" name="assunto" id="txtAssunto" value={assunto}
                         onChange={(e)=>setAssunto(e.target.value)}></input>
                     
-                        <label for="descricao">Descrição</label>
+                        <label htmlFor="descricao">Descrição</label>
                         <textarea name="descricao" cols="30" rows="10" id="txtDescricao" value={descricao}
                         onChange={(e)=>setDescricao(e.target.value)}></textarea>
                         
