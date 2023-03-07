@@ -1,6 +1,6 @@
 import styles from './Home.module.css'
 
-import Imagem_fundo from '../components/layout/Homepage/Image_fundo'
+import Image_fundo from '../components/layout/Homepage/Image_fundo'
 import Pesquisa from '../components/layout/Homepage/Pesquisa'
 import Sugestoes from '../components/layout/Homepage/Sugestoes'
 
@@ -12,7 +12,7 @@ function Home(){
 
     return (
         <div className={styles.fundo}>
-            <Imagem_fundo />
+            <Image_fundo />
             <Pesquisa />
             <div className={styles.container_home}>
                 <div className={styles.espaco}>

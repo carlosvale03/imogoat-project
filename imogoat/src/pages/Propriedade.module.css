@@ -6,3 +6,14 @@
 .galery img{
     width: 200px;
 }
+
+.dados li{
+    display: flex;
+    list-style-type: none;
+    /* margin-bottom: 1em; */
+}
+
+.dados svg{
+    margin-right: 5px;
+    margin-top: 3px;
+}
