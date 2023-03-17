@@ -6,6 +6,7 @@ import styles from './Propriedade.module.css'
 import Galery from '../components/layout/Propipage/Galery';
 import ImageFundo from '../components/layout/Propipage/ImageFundo';
 import Map from '../components/layout/Propipage/map.tsx';
+import Slider from '../components/layout/Propipage/Slider';
 
 import { FaToilet, FaBed } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
@@ -41,6 +42,7 @@ function Propriedade() {
         <p>{item.nome}</p>
         <img src={imgSrc} alt={item.titulo} /> */}
         <ImageFundo fundo={imgSrc} titulo={item.titulo} nome={item.nome} />
+        <Slider />
         <div className={styles.galery}>
           {imgs.map((itens, index) => (
               <Galery key={index} id={index} camImg={itens} />
