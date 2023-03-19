@@ -8,6 +8,7 @@ import Contato from './pages/Contato';
 import Sobre from './pages/Sobre';
 import Teste from './pages/Teste';
 import Propriedade from './pages/Propriedade';
+import Bairro from './pages/Bairro';
 
 import Container from './components/layout/Container';
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/sobre' element={<Sobre />} />
           <Route path='/login' element={<Teste />} />
           <Route path="/propriedade/:id" element={<Propriedade />} />
+          <Route path="/pesquisa/:bairro" element={<Bairro />} />
         </Routes>
       </Container>
       <Footer/>

@@ -40,7 +40,7 @@ export const getLista = () => {
      banheiros: 1, quartos: 2, garagem: 1, imgs: [], 
      descricao: "" },
     { id: 6 ,titulo: "Item 6", nome: "Nome do Item 6", vantagens: "Vantagens do Item 6",
-     camImg: "/aps/ap1.webp", tipo: "apartamento", bairro: "junco", lat: -7.083498, lng: -41.434750,
+     camImg: "/aps/ap1.webp", tipo: "apartamento", bairro: "jureminha", lat: -7.083498, lng: -41.434750,
      banheiros: 1, quartos: 2, garagem: 1, imgs: [], 
      descricao: "" },
   ];

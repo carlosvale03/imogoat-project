@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState, useEffect, useRef } from 'react'
+// import { useState, useEffect, useRef } from 'react'
 import { getLista } from '../../../pages/Dashboard.tsx';
 import Galery from './Galery';
 
@@ -11,13 +11,6 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
-import slide_image_1 from '../../../imgs/aps/ap1.webp';
-import slide_image_2 from '../../../imgs/aps/ap1/01_Estar.jpg';
-import slide_image_3 from '../../../imgs/aps/ap2.png';
-import slide_image_4 from '../../../imgs/aps/ap4.jpg';
-// import slide_image_5 from './assets/images/img_5.jpg';
-// import slide_image_6 from './assets/images/img_6.jpg';
-// import slide_image_7 from './assets/images/img_7.jpg';
 
 function getPropriedadeById(id) {
   const lista = getLista();
@@ -25,7 +18,7 @@ function getPropriedadeById(id) {
 }
 
 function Slider({ id }) {
-  const imgRef = useRef(null);
+  // const imgRef = useRef(null);
   const item = getPropriedadeById(id ? Number.parseInt(id, 10) : null);
   // const camImg = item.camImg;
   const imgs = item.imgs;

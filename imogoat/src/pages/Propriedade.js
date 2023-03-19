@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import styles from './Propriedade.module.css'
-import Galery from '../components/layout/Propipage/Galery';
+// import Galery from '../components/layout/Propipage/Galery';
 import ImageFundo from '../components/layout/Propipage/ImageFundo';
 import Map from '../components/layout/Propipage/map.tsx';
 import Slider from '../components/layout/Propipage/Slider';
@@ -20,7 +20,7 @@ function Propriedade() {
     const { id } = useParams();
     const item = getPropriedadeById(id ? Number.parseInt(id, 10) : null);
     const camImg = item.camImg;
-    const imgs = item.imgs;
+    // const imgs = item.imgs;
     
     // console.log(item); // imprime o objeto da propriedade no console
 
