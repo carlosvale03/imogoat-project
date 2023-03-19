@@ -42,12 +42,7 @@ function Propriedade() {
         <p>{item.nome}</p>
         <img src={imgSrc} alt={item.titulo} /> */}
         <ImageFundo fundo={imgSrc} titulo={item.titulo} nome={item.nome} />
-        <Slider />
-        <div className={styles.galery}>
-          {imgs.map((itens, index) => (
-              <Galery key={index} id={index} camImg={itens} />
-          ))}
-        </div>
+        <Slider id={id} />
         <div>
           <h3>Vantagens inclúsas</h3>
           <p>{item.vantagens}</p>

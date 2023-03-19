@@ -19,9 +19,9 @@ interface IList{
 
 export const getLista = () => {
   const lista: IList[] = [
-    { id: 1 ,titulo: "Edifício Pedro Barbosa", nome: "Apto 301, torre II", vantagens: "Vantagens do Item 1", 
+    { id: 1 ,titulo: "Edifício", nome: "Apto 301, torre II", vantagens: "Vantagens do Item 1", 
     camImg: '/aps/ap4.jpg', tipo: "apartamento", bairro: "Parque de Exposição", lat: -7.083498, lng: -41.434750,
-    banheiros: 1, quartos: 2, garagem: 1, imgs: ["/aps/ap1/01_Estar.jpg", "/aps/ap1/llll.webp", "/aps/ap1/SWELL.jpg"], 
+    banheiros: 1, quartos: 2, garagem: 1, imgs: ["/aps/ap1/01_Estar.jpg", "/aps/ap1/llll.webp", "/aps/ap1/SWELL.jpg", "/aps/ap1/llll.webp"], 
     descricao: "teste para a descrição" },
     { id: 2 ,titulo: "Item 2", nome: "Nome do Item 2", vantagens: "Vantagens do Item 2",
      camImg: "/aps/ap2.jpg", tipo: "apartamento", bairro: "junco", lat: -7.081939, lng: -41.434566,
