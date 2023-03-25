@@ -34,3 +34,14 @@
     font-weight: bold;
     color: #FFBE3D;
 }
+
+
+@media screen and (max-width: 768px){
+    .social_list svg{
+        font-size: 1em;
+    }
+
+    .copy_right{
+        font-size: 0.7em;
+    }
+  }

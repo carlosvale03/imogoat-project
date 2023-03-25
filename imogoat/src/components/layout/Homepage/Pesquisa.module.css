@@ -1,5 +1,5 @@
 .container{
-    height: 150px;
+    /* height: 150px; */
     width: 87vw;
     display: flex;
     flex-direction: row;
@@ -11,9 +11,69 @@
     font-size: 1.6rem;
 }
 
+@media screen and (max-width: 768px){
+    .container{
+        margin-top: -50px;
+    }
+}
+
 .espaco{
     background-color: #fff;
     width: 72vw;
-    height: 150px;
+    /* height: 150px; */
     border-radius: 10px;
 }
+
+
+/* classes dos botoes */
+
+.btn {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2vw;
+    border: 3px solid #265c5f;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #265c5f;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin: 1vw;
+    margin-left: 2vw;
+  }
+  
+  @media screen and (max-width: 768px){
+    .btn{
+      font-size: 8px;
+    }
+  }
+  
+  .btn:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #265c5f;
+    z-index: -1;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    color: white;
+  }
+  
+  .btn:hover:before, .btn:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }

@@ -27,7 +27,7 @@ function Slider({ id }) {
 
   return (
     <div className="container2">
-      <h1 className="heading">Flower Gallery</h1>
+      {/* <h1 className="heading"></h1> */}
       <Swiper
         effect={ 'coverflow' }
         grabCursor={ true }

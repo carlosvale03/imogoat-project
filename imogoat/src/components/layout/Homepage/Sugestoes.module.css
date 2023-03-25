@@ -1,11 +1,12 @@
 .container{
-    height: 25vw;
+    /* height: 27vw; */
     max-width: 95%;
     /* min-width: 95%; */
     background-color: #fff;
     border-radius: 10px;
     margin: 1vw;
 }
+
 
 .img{
     width: 100%;
@@ -44,5 +45,36 @@
 .vantagens{
     font-size: 1.3vw;
     display: flex;
-    margin-top: 1vw;
+    /* margin-top: 0.4vw; */
+}
+.vantagens svg{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.tipo{
+    font-size: 1.3vw;
+    display: flex;
+    margin-top: 0.5vw;
+}
+
+.tipo svg{
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+
+@media screen and (max-width: 768px){
+    .titulo{
+        font-size: 2.6vw;
+    }
+    .tipo{
+        font-size: 2.4vw;
+    }
+    .vantagens{
+        font-size: 2.4vw;
+    }
+    .coracao{
+        width: 3vw;
+    }
 }

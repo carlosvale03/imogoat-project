@@ -37,18 +37,18 @@ function Propriedade() {
 
   
     return (
-      <div>
+      <div className={styles.container}>
         {/* <h2>{item.titulo}</h2>
         <p>{item.nome}</p>
         <img src={imgSrc} alt={item.titulo} /> */}
         <ImageFundo fundo={imgSrc} titulo={item.titulo} nome={item.nome} />
         <Slider id={id} />
         <div>
-          <h3>Vantagens inclúsas</h3>
+          <h2>Vantagens</h2>
           <p>{item.vantagens}</p>
         </div>
         <div>
-          <h3>Tipo de imóvel</h3>
+          <h2>Tipo de imóvel</h2>
           <p>{item.tipo}</p>
         </div>
         <div className={styles.dados}>
@@ -69,7 +69,7 @@ function Propriedade() {
           </ul>
         </div>
         <div>
-          <h3>Bairro</h3>
+          <h2>Bairro</h2>
           <p>{item.bairro}</p>
         </div>
         <div>

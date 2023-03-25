@@ -32,7 +32,7 @@ export const getLista = () => {
      banheiros: 1, quartos: 2, garagem: 1, imgs: [], 
      descricao: "" },
     { id: 4 ,titulo: "Item 4", nome: "Nome do Item 4", vantagens: "Vantagens do Item 4",
-     camImg: "/aps/ap1.webp", tipo: "apartamento", bairro: "junco", lat: -7.083498, lng: -41.434750,
+     camImg: "/aps/ap1.webp", tipo: "casa", bairro: "junco", lat: -7.083498, lng: -41.434750,
      banheiros: 1, quartos: 2, garagem: 1, imgs: [], 
      descricao: "" },
     { id: 5 ,titulo: "Item 5", nome: "Nome do Item 5", vantagens: "Vantagens do Item 5",

@@ -18,6 +18,12 @@
   margin-left: 2vw;
 }
 
+@media screen and (max-width: 768px){
+  .btn{
+    font-size: 8px;
+  }
+}
+
 .btn:before {
   transition: 0.5s all ease;
   position: absolute;

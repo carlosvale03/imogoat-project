@@ -17,3 +17,11 @@
     margin-right: 5px;
     margin-top: 3px;
 }
+
+.container{
+    margin-bottom: 50px;
+}
+
+.container div{
+    margin-bottom: 10px;
+}

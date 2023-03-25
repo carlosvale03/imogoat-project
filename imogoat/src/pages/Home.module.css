@@ -16,6 +16,13 @@
   /* grid-template-rows: 200px; */
 }
 
+@media screen and (max-width: 768px){
+  .espaco{
+    grid-template-columns: 70vw;
+    justify-content: center;
+  }
+}
+
 .sugestoes{
   margin: 10px;
   margin-left: 20vw;

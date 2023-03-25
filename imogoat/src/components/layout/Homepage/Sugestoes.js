@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
+import { MdApartment } from 'react-icons/md'
+import { BiHome } from 'react-icons/bi'
+import { GiCheckMark } from 'react-icons/gi'
+
 import styles from './Sugestoes.module.css'
 
 import coracao from '../../../imgs/coracao.png'
@@ -46,8 +50,15 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
                     <Link className={styles.titulo} to={`/propriedade/${id}`}><h3>{ap}</h3></Link> 
                     <div></div>
                 </div>
+                <div className={styles.tipo}>
+                    {tipo === "casa" &&
+                    <BiHome />}
+                    {tipo === "apartamento" &&
+                    <MdApartment />}
+                    <p>{tipo}</p>
+                </div>
                 <div className={styles.vantagens}>
-                    <img src={visto} className={styles.visto} />
+                    <GiCheckMark />
                     <p>{vantagens}</p>
                 </div>
             </div>

@@ -4,15 +4,16 @@ import Sugestoes from '../components/layout/Homepage/Sugestoes';
 
 import styles from './Home.module.css'
 
-function getPropriedadeById(bairro) {
+function getPropriedadeById(bairro, tipo) {
     const lista = getLista();
     // const listabairro = lista.filter((propriedade) => propriedade.bairro.includes(bairro));
-    return lista.filter((propriedade) => propriedade.bairro.includes(bairro));
+    const listaBairro = lista.filter((propriedade) => propriedade.bairro.includes(bairro))
+    return listaBairro.filter((propriedade) => propriedade.tipo.includes(tipo));
 }
 
 function Bairro(){
-    const { bairro } = useParams();
-    const item = getPropriedadeById(bairro);
+    const { bairro, tipo } = useParams();
+    const item = getPropriedadeById(bairro, tipo);
 
     return(
         // <div>
