@@ -42,7 +42,9 @@ function Contato(){
         <section id={styles.section_form} className={styles.container}>
             <h1>Contato</h1>
             <div className={styles.form_content}>
-              <h3>Entre em contato com os criadores do <span>ImoGOAT</span></h3>
+                <h3 className={styles.subtitulo}>
+                  Entre em contato com os criadores do <span>ImoGOAT</span>
+                </h3>
                 <div className={styles.form_container}>
                     <form onSubmit={sendEmail}>
                         <label htmlFor="name">Nome Completo</label>

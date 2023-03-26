@@ -62,6 +62,33 @@ function NavBar() {
     setMenuOpen(!menuOpen);
   };
 
+  function cookieExists(name) {
+    // Essa função percorre todos os cookies armazenados na 
+    // string de cookies e verifica se o nome do cookie começa 
+    // com o valor passado como parâmetro. Se encontrar um cookie
+    // com o nome desejado, a função retorna true, caso contrário, 
+    // ela retorna false.
+    return document.cookie.split(';').some((cookie) => {
+      return cookie.trim().startsWith(`${name}=`);
+    });
+  }
+
+  function getCookie(nome){
+    const nomeCookie = nome + "=";
+    const ca = document.cookie.split(";")
+    
+    for(var i=0;i<ca.length;i++){
+      var c = ca[i];
+      while(c.charAt(0) === " ") c = c.substring(1,c.length);
+      if(c.indexOf(nomeCookie) === 0){
+        const nome = c.substring(nomeCookie.length, c.length);
+        return nome;
+      }  
+    }
+    return null;
+  }
+
+
   return (
     <div className={styles.navbar}>
       <Container>
@@ -107,14 +134,19 @@ function NavBar() {
             </Link>
           </li>
           <li className={styles.item} id={styles.login}>
-            <Link to="/login" onClick={handleMenuToggle}>
+            <Link to="/login" onClick={handleMenuToggle} className={styles.btn_login} >
               <img
                 src={login}
                 alt="imoGOAT"
                 className={styles.login}
                 align="center"
               ></img>{" "}
-              Login
+              {cookieExists("usuario") === false &&(
+                <div>Login</div>
+              )}
+              {cookieExists("usuario") && (
+                <div>Olá, {getCookie("usuario").split(" ")[0]}!</div>
+              )}
             </Link>
           </li>
         </ul>
