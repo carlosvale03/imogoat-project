@@ -2,7 +2,7 @@ import {getLista} from './Dashboard.tsx'
 import { useParams } from 'react-router-dom'
 import Sugestoes from '../components/layout/Homepage/Sugestoes';
 
-import styles from './Home.module.css'
+import styles from './Bairro.module.css'
 
 function getPropriedadeById(bairro, tipo) {
     const lista = getLista();
@@ -16,19 +16,25 @@ function Bairro(){
     const item = getPropriedadeById(bairro, tipo);
 
     return(
-        // <div>
-        //     {item.map((item, index) => (
-        //         <Sugestoes key={index} id={item.id} camImg={item.camImg} titulo={item.titulo}
-        //         ap={item.nome} vantagens={item.vantagens} tipo={item.tipo} />
-        //     ))}
-        // </div>
-        <div className={styles.container_home}>
-            <div className={styles.espaco}>
-                {item.map((item, index) => (
-                    <Sugestoes key={index} id={item.id} camImg={item.camImg} titulo={item.titulo}
-                    ap={item.nome} vantagens={item.vantagens} tipo={item.tipo} />
-                ))}
-                {/* <h1>{item.bairro}</h1> */}
+        <div>
+            {tipo === "ap" &&
+            <h2 className={styles.titulo}>Apartamentos no bairro {bairro}</h2>}
+            {tipo === "casa" &&
+            <h2 className={styles.titulo}>Casas no bairro {bairro}</h2>}
+            <div className={styles.container_home}>
+                <div className={styles.espaco}>
+                    {item.length > 0 ? (
+                        item.map((item, index) => (
+                            <Sugestoes key={index} id={item.id} camImg={item.camImg} titulo={item.titulo}
+                            ap={item.nome} vantagens={item.vantagens} tipo={item.tipo} />
+                        ))
+                    ) : (
+                        <div className={styles.paragrafos} >
+                            <p id={styles.principalp}>Nenhum resultado para {tipo === "casa" ? "casas" : "apartamentos"} no bairro {bairro}.</p>
+                            <p>Tente verificar a ortografia ou usar bairros sugeridos na barra de pesquisa</p>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     )

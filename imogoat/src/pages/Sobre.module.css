@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   position: relative;
   --header-background-color: #e3e3e3;
   --highlight-color: #000000;
@@ -28,9 +28,22 @@
   color: var(--primary-color);
   text-transform: uppercase;
   margin-bottom: 40px;
+  text-align: center;
+}
+
+.container h2{
+  margin-top: 30px;
+  font-size: 2.5rem;
 }
 
 .container p {
   color: var(--highlight-color);
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container p{
+    font-size: 1.7rem;
+  }
 }
 
