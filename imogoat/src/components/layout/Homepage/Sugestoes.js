@@ -51,15 +51,15 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
                     <div></div>
                 </div>
                 <div className={styles.tipo}>
-                    {tipo === "casa" &&
+                    {tipo.toUpperCase() === "casa".toUpperCase() &&
                     <BiHome />}
-                    {tipo === "apartamento" &&
+                    {tipo.toUpperCase() === "apartamento".toUpperCase() &&
                     <MdApartment />}
                     <p>{tipo}</p>
                 </div>
                 <div className={styles.vantagens}>
                     <GiCheckMark />
-                    <p>{vantagens}</p>
+                    <p>{vantagens[0]}</p>
                 </div>
             </div>
         </div>

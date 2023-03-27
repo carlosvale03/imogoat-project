@@ -10,6 +10,9 @@ import Slider from '../components/layout/Propipage/Slider';
 
 import { FaToilet, FaBed } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
+import { MdApartment } from 'react-icons/md'
+import { BiHome } from 'react-icons/bi'
+import { GiCheckMark } from 'react-icons/gi'
 
 function getPropriedadeById(id) {
   const lista = getLista();
@@ -37,22 +40,35 @@ function Propriedade() {
 
   
     return (
-      <div className={styles.container}>
+      <div className={styles.container_props}>
         {/* <h2>{item.titulo}</h2>
         <p>{item.nome}</p>
         <img src={imgSrc} alt={item.titulo} /> */}
         <ImageFundo fundo={imgSrc} titulo={item.titulo} nome={item.nome} />
         <Slider id={id} />
+        <h3 className={`${styles.titulos} ${styles.sobre_imovel}`}>Sobre o imóvel</h3>
+        <hr/>
         <div>
-          <h2>Vantagens</h2>
-          <p>{item.vantagens}</p>
+          <h1 className={styles.titulos}>Vantagens</h1>
+          {item.vantagens.map((vantagens) => (
+            <div className={styles.vantagens}>
+              <GiCheckMark />
+              <p>{vantagens}</p>
+            </div>
+          ))}
         </div>
         <div>
-          <h2>Tipo de imóvel</h2>
-          <p>{item.tipo}</p>
+          <h1 className={styles.titulos}>Tipo de imóvel</h1>
+          <div className={styles.tipo}>
+            {item.tipo.toUpperCase() === "casa".toUpperCase() &&
+              <BiHome />}
+            {item.tipo.toUpperCase() === "Apartamento".toUpperCase() &&
+              <MdApartment />}
+            <p>{item.tipo}</p>
+          </div>
         </div>
         <div className={styles.dados}>
-          <h2>Dados</h2>
+          <h1 className={styles.titulos}>Dados</h1>
           <ul>
             <li>
               <FaToilet />
@@ -69,16 +85,16 @@ function Propriedade() {
           </ul>
         </div>
         <div>
-          <h2>Bairro</h2>
-          <p>{item.bairro}</p>
+          <h1 className={styles.titulos}>Bairro</h1>
+          <p>-{item.bairro}</p>
         </div>
         <div>
-          <h2>Explore a região</h2>
-          <h3>Encontre pontos turísticos, restaurantes e locais de entretenimento próximos ao {item.titulo}!</h3>
+          <h1 className={styles.titulos}>Explore a região</h1>
+          <p>Encontre pontos turísticos, restaurantes e locais de entretenimento próximos ao {item.titulo}!</p>
           <Map item={item} />
         </div>
         <div>
-          <h3>Descrição</h3>
+          <h1 className={styles.titulos}>Descrição</h1>
           <p>{item.descricao}</p>
         </div>
       </div>
