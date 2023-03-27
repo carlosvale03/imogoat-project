@@ -1,78 +1,181 @@
-.container{
+.container {
   display: flex;
   width: 100%;
 }
 
 .subscribe {
-    position: relative;
-    height: 300px;
-    width: 340px;
-    padding: 20px;
-    background-color: #FFF;
-    border-radius: 4px;
-    color: #333;
-    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
-    margin: auto;
+  position: relative;
+  height: 300px;
+  width: 340px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+.subscribe:after {
+  position: absolute;
+  content: "";
+  right: -10px;
+  bottom: 18px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1a044e;
+}
+
+.subscribe p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 28px;
+}
+
+.subscribe input {
+  position: absolute;
+  bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 82%;
+  background: transparent;
+  transition: all 0.25s ease;
+  margin-bottom: 100px;
+}
+
+.subscribe input:focus {
+  outline: none;
+  border-bottom: 1px solid #0d095e;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    "sans-serif";
+}
+
+.subscribe .submit_btn {
+  position: absolute;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #265c5f;
+  color: #fff;
+  padding: 12px 25px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  right: -10px;
+  bottom: -20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+}
+
+.subscribe .submit_btn:hover {
+  background-color: #1d4547;
+  box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+}
+
+.containerbemvindo {
+  width: 100%;
+  height: 100%;
+}
+
+.bemvindo {
+  margin: auto;
+  background-color: #cccccc;
+  width: 40%;
+  height: 85%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.msg {
+  /* background-color: white; */
+  border-radius: 10px;
+
+  height: 75%;
+  --featured-font-family: "Archivo", sans-serif;
+}
+
+.msg h1 {
+  font-family: var(--featured-font-family);
+  font-size: 3.5rem;
+  color: #265c5f;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.msg p {
+  padding: 15px;
+  text-align: justify;
+}
+
+.msg hr {
+  margin: 15px;
+}
+
+.divbtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.divbtn button {
+  background-color: #265c5f;
+  width: 100px;
+  height: 40px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 2px; /* espaco entre as letras */
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border: 0.5px solid #fff;
+  padding: 0.7em 2vw;
+}
+
+.divbtn button:hover {
+  background-color: #1c484b;
+}
+
+@media screen and (max-width: 1100px) {
+  .bemvindo {
+    width: 50%;
   }
-  
-  .subscribe:after {
-    position: absolute;
-    content: "";
-    right: -10px;
-    bottom: 18px;
-    width: 0;
-    height: 0;
-    border-left: 0px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #1a044e;
+}
+
+@media screen and (max-width: 910px) {
+  .bemvindo {
+    width: 60%;
   }
-  
-  .subscribe p {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    line-height: 28px;
+}
+
+@media screen and (max-width: 715px) {
+  .bemvindo {
+    width: 100%;
   }
-  
-  .subscribe input {
-    position: absolute;
-    bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #d4d4d4;
-    padding: 10px;
-    width: 82%;
-    background: transparent;
-    transition: all .25s ease;
-    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 450px) {
+  .msg h1 {
+    font-size: 2rem;
+    padding-top: 15px;
   }
-  
-  .subscribe input:focus {
-    outline: none;
-    border-bottom: 1px solid #0d095e;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+
+  .msg p {
+    font-size: 1.5rem;
   }
-  
-  .subscribe .submit_btn {
-    position: absolute;
-    border-radius: 30px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    background-color: #265c5f;
-    color: #FFF;
-    padding: 12px 25px;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    right: -10px;
-    bottom: -20px;
-    cursor: pointer;
-    transition: all .25s ease;
-    box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+  .divbtn button {
+    font-size: 10px;
+    width: 80px;
+    height: 35px;
   }
-  
-  .subscribe .submit_btn:hover {
-    background-color: #1d4547;
-    box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
-  }
+}
