@@ -1,6 +1,7 @@
 import { getLista } from './Dashboard.tsx';
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 import styles from './Propriedade.module.css'
 // import Galery from '../components/layout/Propipage/Galery';
@@ -10,9 +11,11 @@ import Slider from '../components/layout/Propipage/Slider';
 
 import { FaToilet, FaBed } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
-import { MdApartment } from 'react-icons/md'
+import { MdApartment, MdDriveFileRenameOutline } from 'react-icons/md'
 import { BiHome } from 'react-icons/bi'
 import { GiCheckMark } from 'react-icons/gi'
+import { BsWhatsapp } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 
 function getPropriedadeById(id) {
   const lista = getLista();
@@ -36,6 +39,10 @@ function Propriedade() {
             setImgSrc(image.default);
         }
         loadImage();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth" // Para uma animação suave de rolagem
+        });
     }, [camImg])
 
   
@@ -96,6 +103,29 @@ function Propriedade() {
         <div>
           <h1 className={styles.titulos}>Descrição</h1>
           <p>{item.descricao}</p>
+        </div>
+        <hr></hr>
+        <div className={styles.dados}>
+          <h1 className={`${styles.titulos} ${styles.sobre_imovel}`}>Contato com o proprietário</h1>
+          <ul>
+            <li>
+              <MdDriveFileRenameOutline />
+              <p>{item.nomeProprietario}</p>
+            </li>
+            <Link to={item.linkWpp} target='_blank' className={styles.link}>
+              <li>
+                <BsWhatsapp />
+                <p>{item.telProprietario}</p>
+              </li>
+            </Link>
+            <br/>
+            <Link to={item.linkEmail} target='_blank' className={styles.link}>
+              <li>
+                <AiOutlineMail />
+                <p>{item.emailProprietario}</p>
+              </li>
+            </Link>
+          </ul>
         </div>
       </div>
     );

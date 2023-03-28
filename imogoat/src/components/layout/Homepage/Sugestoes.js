@@ -21,10 +21,6 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
         redcoracao = aux;
     }
 
-    // function selecionaItem(id) {
-    //     props.selecionarItem(id);
-    // }
-
     const [imgSrc, setImgSrc] = useState("");
 
     useEffect(() => {

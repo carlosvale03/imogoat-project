@@ -17,6 +17,10 @@ function Input({ text, tipo }){
         }else{
             history(`./pesquisa/${bairropesquisa}/${tipo}`);
         }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Para uma animação suave de rolagem
+        });
     }
 
     return(

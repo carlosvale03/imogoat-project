@@ -12,6 +12,10 @@
   margin-top: 3px;
 }
 
+.dados a{
+  text-decoration: none;
+}
+
 .container_props {
   margin-bottom: 50px;
   --featured-font-family: "Archivo", sans-serif;
@@ -63,4 +67,17 @@
 
 .container_props hr{
     margin-bottom: 15px;
+}
+
+.container_props p{
+  text-align: justify;
+}
+
+.link{
+  display: inline-block;
+  color: black;
+}
+
+.link svg{
+  color: #2e3c4e;
 }

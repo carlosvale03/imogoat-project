@@ -5,10 +5,13 @@ import Pesquisa from '../components/layout/Homepage/Pesquisa'
 import Sugestoes from '../components/layout/Homepage/Sugestoes'
 
 import { getLista } from './Dashboard.tsx'
+import { useState } from 'react'
+import { BounceLoader } from 'react-spinners';
 
 function Home(){
     const lista = getLista();
     const listaQuatro = lista.slice(0, 4);
+    const [carregando, setCarregando] = useState(true);
 
     return (
         <div className={styles.fundo}>
