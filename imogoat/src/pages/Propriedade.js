@@ -11,7 +11,7 @@ import Slider from '../components/layout/Propipage/Slider';
 
 import { FaToilet, FaBed } from "react-icons/fa";
 import { GiHomeGarage } from "react-icons/gi";
-import { MdApartment, MdDriveFileRenameOutline } from 'react-icons/md'
+import { MdApartment, MdDriveFileRenameOutline, MdCancel } from 'react-icons/md'
 import { BiHome } from 'react-icons/bi'
 import { GiCheckMark } from 'react-icons/gi'
 import { BsWhatsapp } from "react-icons/bs";
@@ -57,12 +57,17 @@ function Propriedade() {
         <hr/>
         <div>
           <h1 className={styles.titulos}>Vantagens</h1>
-          {item.vantagens.map((vantagens) => (
+          {item.vantagens.length > 0 ? (item.vantagens.map((vantagens) => (
             <div className={styles.vantagens}>
               <GiCheckMark />
               <p>{vantagens}</p>
             </div>
-          ))}
+          ))) : (
+            <div className={styles.vantagens}>
+              <MdCancel />
+              <p>Sem vantagens especificadas</p>
+            </div>
+          )}
         </div>
         <div>
           <h1 className={styles.titulos}>Tipo de imóvel</h1>
@@ -97,7 +102,7 @@ function Propriedade() {
         </div>
         <div>
           <h1 className={styles.titulos}>Explore a região</h1>
-          <p>Encontre pontos turísticos, restaurantes e locais de entretenimento próximos ao {item.titulo}!</p>
+          <p>Encontre pontos turísticos, restaurantes e locais de entretenimento próximos a(o) {item.titulo}!</p>
           <Map item={item} />
         </div>
         <div>

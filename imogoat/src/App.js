@@ -30,11 +30,16 @@ function App() {
           location="bottom"
           buttonText="Aceitar"
           cookieName="myAwesomeCookieName2"
-          style={{ background: "#2B373B" }}
+          style={{ background: "#2e3c4e" }}
           buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
           expires={150}
         >
-          Este site usa cookies para melhorar sua experiência.{" "}
+          Este site usa cookies para melhorar sua experiência. <br/> 
+          Bem-vindo ao ImoGOAT, nosso projeto universitário! Gostaríamos de informar que este site ainda está 
+          em desenvolvimento. Além disso, todas as imagens utilizadas neste site foram retiradas da internet 
+          apenas para fins ilustrativos. Agradecemos a sua compreensão e estamos trabalhando para oferecer 
+          uma experiência cada vez melhor!
+          {" "}
           <span style={{ fontSize: "10px" }}>
             {" "}
             (Configurações de cookies)

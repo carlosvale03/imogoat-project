@@ -30,6 +30,11 @@ function Input({ text, tipo }){
                 <datalist id="bairros">
                     <option value="junco"></option>
                     <option value="Parque de Exposição"></option>
+                    <option value="Centro"></option>
+                    <option value="Boa Vista"></option>
+                    <option value="Bairro Bomba"></option>
+                    <option value="Ipueiras"></option>
+                    <option value="São José"></option>
                 </datalist>
             </form>
             <button className={styles.btn} onClick={Pesquisar}>

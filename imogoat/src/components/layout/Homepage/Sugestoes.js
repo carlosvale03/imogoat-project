@@ -53,10 +53,16 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
                     <MdApartment />}
                     <p>{tipo}</p>
                 </div>
-                <div className={styles.vantagens}>
+                {/* <div className={styles.vantagens}>
                     <GiCheckMark />
                     <p>{vantagens[0]}</p>
-                </div>
+                </div> */}
+                {vantagens.length > 0 && (
+                    <div className={styles.vantagens}>
+                        <GiCheckMark />
+                        <p>{vantagens[0]}</p>
+                    </div>
+                )}
             </div>
         </div>
     )

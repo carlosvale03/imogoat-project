@@ -7,8 +7,8 @@ import styles from './Bairro.module.css'
 function getPropriedadeById(bairro, tipo) {
     const lista = getLista();
     // const listabairro = lista.filter((propriedade) => propriedade.bairro.includes(bairro));
-    const listaBairro = lista.filter((propriedade) => propriedade.bairro.includes(bairro))
-    return listaBairro.filter((propriedade) => propriedade.tipo.includes(tipo));
+    const listaBairro = lista.filter((propriedade) => propriedade.bairro.toUpperCase().includes(bairro.toUpperCase()))
+    return listaBairro.filter((propriedade) => propriedade.tipo.toUpperCase().includes(tipo.toUpperCase()));
 }
 
 function Bairro(){
