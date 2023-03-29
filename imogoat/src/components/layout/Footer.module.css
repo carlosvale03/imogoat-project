@@ -1,0 +1,47 @@
+.footer{
+    background-color: #265c5f;
+    color: #fff;
+    padding: 3vw;
+    text-align: center;
+}
+
+.social_list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.list{
+    margin: 0 1em;
+    color: #fcfcfc;
+}
+
+.list :hover{
+    color: #FFBE3D;
+}
+
+.social_list svg{
+    font-size: 1.7vw;
+    cursor: pointer;
+}
+
+.copy_right{
+    font-size: 1.3vw;
+    margin-top: 2vw;
+}
+
+.copy_right span{
+    font-weight: bold;
+    color: #FFBE3D;
+}
+
+
+@media screen and (max-width: 768px){
+    .social_list svg{
+        font-size: 1em;
+    }
+
+    .copy_right{
+        font-size: 0.7em;
+    }
+  }

@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #265c5f;
+  --primary-color-contrast: #fcfcfc;
+  --field-background-color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  position: relative;
+  --header-background-color: #e3e3e3;
+  --highlight-color: #000000;
+  --featured-font-family: "Archivo", sans-serif;
+  --character-top-image-color: #ffffff;
+  --character-bottom-image-color: #e5e5e5;
+  --footer-background-color: #b5bbbf;
+}
+
+.container h1,
+.container h2,
+.container h3 {
+  font-family: var(--featured-font-family);
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.container h2{
+  margin-top: 30px;
+  font-size: 2.5rem;
+}
+
+.container p {
+  color: var(--highlight-color);
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container p{
+    font-size: 1.7rem;
+  }
+}
+

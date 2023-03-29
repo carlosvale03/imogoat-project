@@ -1,0 +1,83 @@
+.galery img {
+  width: 200px;
+}
+
+.dados li {
+  display: flex;
+  list-style-type: none;
+}
+
+.dados svg {
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.dados a{
+  text-decoration: none;
+}
+
+.container_props {
+  margin-bottom: 50px;
+  --featured-font-family: "Archivo", sans-serif;
+}
+
+.container_props div {
+  margin-bottom: 10px;
+}
+
+.container_props .titulos{
+  color: #2e3c4e;
+  font-family: var(--featured-font-family);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+ 
+.container_props h3{
+    font-size: 3rem;
+    text-align: left;
+}
+
+
+.tipo{
+    font-size: 1em;
+    display: flex;
+    margin-top: 0.5vw;
+}
+
+.tipo svg{
+    margin-top: 4px;
+    margin-right: 5px;
+}
+
+.container_props .sobre_imovel{
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.vantagens{
+    font-size: 1em;
+    display: flex;
+    /* margin-top: 0.4vw; */
+}
+.vantagens svg{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+.container_props hr{
+    margin-bottom: 15px;
+}
+
+.container_props p{
+  text-align: justify;
+}
+
+.link{
+  display: inline-block;
+  color: black;
+}
+
+.link svg{
+  color: #2e3c4e;
+}

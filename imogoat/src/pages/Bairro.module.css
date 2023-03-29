@@ -1,0 +1,56 @@
+.container_home {
+  width: 88vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin-top: 25px;
+}
+
+.paragrafos{
+    width: 120%;
+    margin-left: 15.5vw;
+}
+
+#principalp{
+    font-size: 1.8rem;
+}
+
+.paragrafos p{
+    font-size: 1.3rem;
+}
+
+
+
+.espaco {
+  width: 73vw;
+  display: grid;
+  grid-template-columns: 36vw 36vw;
+  /* grid-template-rows: 200px; */
+}
+
+.titulo{
+    color: #265c5f;
+    --featured-font-family: "Archivo", sans-serif;
+}
+
+.titulo h1, h2{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: var(--featured-font-family);
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .espaco {
+    grid-template-columns: 70vw;
+    justify-content: center;
+  }
+  .paragrafos{
+      margin-left: 0;
+      width: 100%;
+  }
+}
