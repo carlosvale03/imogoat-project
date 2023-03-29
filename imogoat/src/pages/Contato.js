@@ -3,12 +3,24 @@ import styles from './Contato.module.css'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 
+
+/**
+ * Componente que representa a página de contato do ImoGOAT.
+ * 
+ * @returns O componente Contato.
+ */
 function Contato(){
     const [ name, setName ] = useState("")
     const [ email, setEmail ] = useState("")
     const [ assunto, setAssunto ] = useState("")
     const [ descricao, setDescricao ] = useState("")
 
+
+    /**
+     * Função que envia o email ao clicar no botão de submit do formulário.
+     * 
+     * @param {Object} e - Evento de clique do botão de submit.
+     */
     function sendEmail(e){
         e.preventDefault();
 
@@ -24,6 +36,7 @@ function Contato(){
             assunto: assunto
         }
 
+        // vai enviar os dados presentes no formulario para o emailjs e ele vai mandar para o email de contato formatato
         emailjs.send("service_57wkygj", "template_5iqiid5", templateParams, "t6bn4rh4rwAS8joJl").then(
             (response) => {
                 console.log("email enviado", response.status, response.text)

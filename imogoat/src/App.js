@@ -1,38 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // import { useState } from 'react'
+
+// importação dos componentes necessários
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import './App.css';
 import Home from './pages/Home'
 import Contato from './pages/Contato';
 import Sobre from './pages/Sobre';
-import Teste from './pages/Teste';
 import Propriedade from './pages/Propriedade';
 import Bairro from './pages/Bairro';
 import Login from './pages/Login';
 import CookieConsent from "react-cookie-consent";
 
+// este componente é responsável por envolver todo o conteúdo da aplicação e definir uma classe personalizada.
 import Container from './components/layout/Container';
 
 function App() {
-  // const [itemSelecionado, setItemSelecionado] = useState(null);
-
-  // function selecionarItem(id) {
-  //   setItemSelecionado(id);
-  // }
-
 
   return (
     
+    // este bloco define todas as rotas da aplicação.
     <Router>
       <div>
         <CookieConsent
+        // componente que apresenta um banner informando que o site utiliza cookies, permitindo ao usuário 
+        // aceitar ou ACEITAR o uso deles.
           location="bottom"
           buttonText="Aceitar"
           cookieName="myAwesomeCookieName2"
           style={{ background: "#2e3c4e" }}
           buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-          expires={150}
+          expires={150} // tempo, em dias, para que o cookie expire.
         >
           Este site usa cookies para melhorar sua experiência. <br/> 
           Bem-vindo ao ImoGOAT, nosso projeto universitário! Gostaríamos de informar que este site ainda está 
@@ -46,14 +45,17 @@ function App() {
           </span>
         </CookieConsent>
         <NavBar />
-        <Container customClass='min-height'>
+        <Container customClass='min-height'> {/* componente que engloba o conteúdo principal do site, 
+        permitindo configurar uma classe CSS personalizada. */}
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/contato' element={<Contato />} />
             <Route path='/sobre' element={<Sobre />} />
             <Route path='/login' element={<Login />} />
-            <Route path="/propriedade/:id" element={<Propriedade />} />
-            <Route path="/pesquisa/:bairro/:tipo" element={<Bairro />} />
+            <Route path="/propriedade/:id" element={<Propriedade />} /> {/* O ":id" vai passar o id da propriedade 
+            como parametro */}
+            <Route path="/pesquisa/:bairro/:tipo" element={<Bairro />} /> {/* O ":bairro" e o ":tipo" vai passar o 
+            bairro e o tipo de imóvel da pesquisa como parametro */}
           </Routes>
         </Container>
         <Footer/>

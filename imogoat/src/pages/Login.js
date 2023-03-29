@@ -1,77 +1,16 @@
-// import styles from './Login.module.css'
-// import { useState, Component } from 'react'
-
-// function Login(){
-//     const [validade, setValidade] = useState("");
-
-    
-
-//     function cookieExists(name) {
-//         // Essa função percorre todos os cookies armazenados na 
-//         // string de cookies e verifica se o nome do cookie começa 
-//         // com o valor passado como parâmetro. Se encontrar um cookie
-//         // com o nome desejado, a função retorna true, caso contrário, 
-//         // ela retorna false.
-//         return document.cookie.split(';').some((cookie) => {
-//           return cookie.trim().startsWith(`${name}=`);
-//         });
-//       }
-    
-
-//     function loginCookie(){
-//         const nome = document.getElementById("nome-login").value;
-        
-//         if(nome === ''){
-//             alert("Informe seu nome!");
-//         }else{
-//             const local = 'path=/'
-//             const date = new Date()
-//             date.setTime(date.getTime() + (365*24*60*60*1000));
-//             // setValidade("; expires=" + date.toUTCString());
-//             const validade = ("; expires=" + date.toUTCString())
-//             console.log("Tipo da validade: ", typeof(validade))
-
-//             document.cookie = "usuario" + "=" + (nome || "") + validade + "; " + local;
-//         }
-//     }
-
-//     return(
-//         <div className={styles.container}>
-//             {cookieExists("usuario") &&(
-//                 <div>Olá, Carlos!</div>
-//             )}
-//             {cookieExists("usuario") === false &&(
-//                 <div className={styles.subscribe}>
-//                     <p>LOGIN</p>
-//                     <input 
-//                     type="text" 
-//                     id="nome-login" 
-//                     name="nome" 
-//                     className={styles.subscribe_input} 
-//                     placeholder="Seu nome" />
-//                     <br />
-//                     <div className={styles.submit_btn} onClick={() => loginCookie()} >SUBMETER</div>
-//                 </div>
-//             )}
-//         </div>
-//     )
-// }
-
-// export default Login
-
-
-
 import styles from './Login.module.css';
 import React, { Component } from 'react';
 
 class Login extends Component {
   constructor(props) {
     super(props);
+     // Define o estado inicial do componente, com a propriedade "validade" vazia
     this.state = {
       validade: '',
     };
   }
 
+  // Função que verifica se um determinado cookie existe
   cookieExists(name) {
     // Essa função percorre todos os cookies armazenados na 
     // string de cookies e verifica se o nome do cookie começa 
@@ -83,6 +22,7 @@ class Login extends Component {
     });
   }
 
+  // Função que armazena um cookie com o nome do usuário e define sua validade para um ano
   loginCookie() {
     const { location } = window;
     const nome = document.getElementById('nome-login').value;
@@ -99,10 +39,12 @@ class Login extends Component {
 
       document.cookie = 'usuario' + '=' + (nome || '') + validade + '; ' + local;
 
+      // Recarrega a página para exibir o conteúdo correto de acordo com o cookie armazenado
       location.reload()
     }
   }
 
+  // Função que obtém o valor do cookie com o nome do usuário
   getCookie(nome){
     const nomeCookie = nome + "=";
     const ca = document.cookie.split(";")
@@ -118,6 +60,7 @@ class Login extends Component {
     return null;
   }
 
+  // Função que remove o cookie com o nome do usuário e recarrega a página
   apagacookie(nome){
     const { location } = window;
       document.cookie = nome + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
@@ -128,6 +71,7 @@ class Login extends Component {
     return (
       <div className={styles.container}>
         {this.cookieExists('usuario') && (
+            // Se o cookie com o nome do usuário existe, exibe uma mensagem de boas-vindas e um botão "Sair"
             <div className={styles.containerbemvindo}>
                 <div className={styles.bemvindo}>
                     <div className={styles.msg}>
@@ -148,6 +92,7 @@ class Login extends Component {
             </div>
         )}
         {!this.cookieExists('usuario') && (
+          // Se o cookie com o nome do usuário não existe, exibe uma caixa para colocar o nome e submeter
           <div className={styles.subscribe}>
             <p>LOGIN</p>
             <input
