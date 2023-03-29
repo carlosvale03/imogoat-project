@@ -3,6 +3,13 @@ import styles from './Footer.module.css'
 
 import { Link } from 'react-router-dom'
 
+/**
+ * Componente que cria um rodapé para a aplicação ImoGOAT.
+ * 
+ * Este componente contém uma lista com as redes sociais e um paragrafo com o ano de criação da aplicação.
+ * 
+ * @returns Componente React do Footer.
+ */
 function Footer(){
     return(
         <div className={styles.footer}>

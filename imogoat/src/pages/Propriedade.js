@@ -17,28 +17,41 @@ import { GiCheckMark } from 'react-icons/gi'
 import { BsWhatsapp } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 
+
+// Essa função vai pegar a lista de propriedades e retornar os dados da propriedade com o id informado
 function getPropriedadeById(id) {
   const lista = getLista();
   return lista.find((item) => item.id === id);
 }
 
+
+/**
+ * Página que mostra dados de propriedade da aplicação ImoGOAT.
+ * 
+ * Esta página contém um titulo, uma galeria de imagens da propriedade, dados e um mapa da localização do imóvel.
+ * 
+ * @returns Componente React da página propriedade.
+ */
 function Propriedade() {
-    const { id } = useParams();
+    // parametro "id" passado no App.js
+    const { id } = useParams(); 
+    // objeto da propriedade com o id passado
     const item = getPropriedadeById(id ? Number.parseInt(id, 10) : null);
+    // caminho da imagem de capa da propriedade
     const camImg = item.camImg;
-    // const imgs = item.imgs;
-    
-    // console.log(item); // imprime o objeto da propriedade no console
 
-
+    // estado para a constante imgSrc para mostrar na capa
     const [imgSrc, setImgSrc] = useState("");
 
+    // Vai setar o valor de imgSrc de acordo com o caminho da imagem
     useEffect(() => {
         const loadImage = async () => {
             const image = await import('../imgs' + camImg);
             setImgSrc(image.default);
         }
         loadImage();
+
+        // Subir a tela quando a pagina for aberta
         window.scrollTo({
           top: 0,
           behavior: "smooth" // Para uma animação suave de rolagem
@@ -48,15 +61,16 @@ function Propriedade() {
   
     return (
       <div className={styles.container_props}>
-        {/* <h2>{item.titulo}</h2>
-        <p>{item.nome}</p>
-        <img src={imgSrc} alt={item.titulo} /> */}
+        {/* Imagem de capa do imóvel */}
         <ImageFundo fundo={imgSrc} titulo={item.titulo} nome={item.nome} />
+        {/* Galeria */}
         <Slider id={id} />
+        {/* Dados sobre o imóvel */}
         <h3 className={`${styles.titulos} ${styles.sobre_imovel}`}>Sobre o imóvel</h3>
         <hr/>
         <div>
           <h1 className={styles.titulos}>Vantagens</h1>
+          {/* Se tiver vantagem imprime isso, se nao, aquilo */}
           {item.vantagens.length > 0 ? (item.vantagens.map((vantagens) => (
             <div className={styles.vantagens}>
               <GiCheckMark />

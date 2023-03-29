@@ -1,5 +1,12 @@
 import styles from './Sobre.module.css'
 
+/**
+ * Página que mostra informações sobre a aplicação ImoGOAT.
+ * 
+ * Esta página contém informações sobre quem somos e explicação da excolha do nome.
+ * 
+ * @returns Componente React da página sobre.
+ */
 function Sobre(){
     return(
         <div className={styles.container}>

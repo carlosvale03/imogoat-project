@@ -13,6 +13,7 @@ import visto from '../../../imgs/visto.png'
 
 function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
 
+    // Função para alternar a imagem do coração entre vazio e preenchido ao clicar
     function mudaCoracao(id){
         const img = document.getElementById(id);
         img.src = coracao;
@@ -21,6 +22,7 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
         redcoracao = aux;
     }
 
+    // Utilização do Hook useEffect para carregar a imagem com o caminho camImg vindo das props
     const [imgSrc, setImgSrc] = useState("");
 
     useEffect(() => {
@@ -53,10 +55,6 @@ function Sugestoes({ props, id, camImg, titulo, ap, vantagens, tipo }){
                     <MdApartment />}
                     <p>{tipo}</p>
                 </div>
-                {/* <div className={styles.vantagens}>
-                    <GiCheckMark />
-                    <p>{vantagens[0]}</p>
-                </div> */}
                 {vantagens.length > 0 && (
                     <div className={styles.vantagens}>
                         <GiCheckMark />
