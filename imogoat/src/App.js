@@ -19,7 +19,6 @@ import Container from './components/layout/Container';
 function App() {
 
   return (
-    
     // este bloco define todas as rotas da aplicação.
     <Router>
       <div>
